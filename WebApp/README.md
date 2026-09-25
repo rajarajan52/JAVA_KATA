@@ -15,13 +15,19 @@ This is the REST API version of the Gilded Rose inventory project. It keeps the 
 
 ```bash
 ./mvnw clean verify
+./mvnw spring-boot:run
 ```
 
 or on Windows:
 
 ```powershell
 mvnw.cmd clean verify
+mvnw.cmd spring-boot:run
 ```
+
+Then open:
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- API docs: http://localhost:8080/v3/api-docs
 
 ## API endpoints
 
