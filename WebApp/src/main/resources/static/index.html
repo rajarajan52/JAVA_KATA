@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilded Rose Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Inventory management</p>
+                <h1>Gilded Rose Dashboard</h1>
+            </div>
+            <button id="loadDemoBtn" class="primary-btn">Load Demo Inventory</button>
+        </header>
+
+        <section class="cards">
+            <div class="card summary-card">
+                <span class="label">Total Items</span>
+                <strong id="itemCount">0</strong>
+            </div>
+            <div class="card summary-card">
+                <span class="label">Average Quality</span>
+                <strong id="avgQuality">0</strong>
+            </div>
+            <div class="card summary-card">
+                <span class="label">Status</span>
+                <strong id="statusBadge">Ready</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Inventory</h2>
+                <button id="updateBtn" class="primary-btn">Update Inventory</button>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Sell In</th>
+                            <th>Quality</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel form-panel">
+            <div class="panel-header">
+                <h2>Add Item</h2>
+            </div>
+
+            <form id="itemForm">
+                <div class="form-grid">
+                    <label>
+                        <span>Item Name</span>
+                        <input id="itemName" type="text" placeholder="Aged Brie" required>
+                    </label>
+                    <label>
+                        <span>Sell In</span>
+                        <input id="itemSellIn" type="number" min="0" value="5" required>
+                    </label>
+                    <label>
+                        <span>Quality</span>
+                        <input id="itemQuality" type="number" min="0" value="10" required>
+                    </label>
+                </div>
+                <button type="submit" class="secondary-btn">Add Item</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
